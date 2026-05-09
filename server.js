@@ -19,7 +19,7 @@ app.set('views', path.join(__dirname, 'views'));
 
 // MONGO - Підключення
 // Використовуємо змінну оточення MONGODB_URI
-//const dbURI = process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/qrfound';
+const dbURI = process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/qrfound';
 
 //mongoose.connect(dbURI)
   //.then(() => console.log('Успішно підключено до бази даних!'))
