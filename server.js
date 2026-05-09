@@ -19,11 +19,11 @@ app.set('views', path.join(__dirname, 'views'));
 
 // MONGO - Підключення
 // Використовуємо змінну оточення MONGODB_URI
-const dbURI = process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/qrfound';
+//const dbURI = process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/qrfound';
 
-mongoose.connect(dbURI)
-  .then(() => console.log('Успішно підключено до бази даних!'))
-  .catch(err => console.error('Помилка підключення до бази:', err));
+//mongoose.connect(dbURI)
+  //.then(() => console.log('Успішно підключено до бази даних!'))
+  //.catch(err => console.error('Помилка підключення до бази:', err));
 
 // ROUTES
 const routes = require('./app');
@@ -33,5 +33,13 @@ app.use('/', routes);
 const PORT = process.env.PORT || 3000;
 
 app.listen(PORT, '0.0.0.0', () => {
-    console.log(`🚀 Server is running on port ${PORT}`);
+    console.log(`🚀 Сервер запущено на порту ${PORT}`);
+    
+    // Підключаємося до бази ТІЛЬКИ після успішного старту сервера
+    mongoose.connect(dbURI)
+      .then(() => console.log('✅ MongoDB підключено!'))
+      .catch(err => {
+          console.error('❌ Помилка бази:', err.message);
+          console.log('Перевірте MONGODB_URI в налаштуваннях Render!');
+      });
 });
