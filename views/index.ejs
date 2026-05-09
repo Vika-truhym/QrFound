@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>QR-Found</title>
+
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="https://unpkg.com/html5-qrcode"></script>
+
+</head>
+
+<body>
+
+<header class="main-header">
+    <a href="/">
+        <img src="/images/logo.png" class="logo" alt="QR-Found Logo">
+    </a>
+</header>
+
+<div class="container">
+
+    <div class="hero-title">
+
+        <img src="/images/qr-logo.png" class="qr-icon">
+
+        <div class="logo-big">
+            QR-Found
+        </div>
+
+    </div>
+
+    <img src="/images/big-key.png" class="big-key">
+
+    <div class="title">
+
+        Lost & Found
+
+        <span>
+            Smart QR System
+        </span>
+
+    </div>
+
+    <div class="description">
+
+        Create a smart digital tag that helps people return your lost items.
+
+    </div>
+
+    <button class="btn" onclick="openModal()">
+
+        Create QR-code
+
+    </button>
+
+    <button class="btn btn-secondary" onclick="openScanner()">
+    Scan QR-code
+</button>
+
+<div class="overlay" id="scannerOverlay">
+    <div class="modal">
+        <div class="close-btn" onclick="closeScanner()">×</div>
+        <div class="gradient-title">Scan QR Code</div>
+        
+        <div id="reader" style="width: 100%; max-width: 400px; margin: 0 auto;"></div>
+        
+        <div class="description" style="margin-top: 15px;">
+            Align the QR code within the frame to scan.
+        </div>
+    </div>
+</div>
+
+    <div class="overlay" id="overlay">
+
+        <div class="modal">
+
+            <div class="close-btn" onclick="closeModal()">
+
+                ×
+
+            </div>
+
+            <div class="gradient-title">
+
+                Create your QR code
+
+            </div>
+
+            <form action="/create" method="POST">
+
+                <input
+                    type="text"
+                    name="item_name"
+                    placeholder="Item name"
+                    required
+                >
+
+                <input
+                    type="text"
+                    name="owner_name"
+                    placeholder="Owner name"
+                    required
+                >
+
+                <div class="phone-row">
+
+                    <select
+                        name="country_code"
+                        class="phone-code"
+                    >
+
+                        <option value="+380">
+                            🇺🇦 +380
+                        </option>
+
+                        <option value="+48">
+                            🇵🇱 +48
+                        </option>
+
+                    </select>
+
+                    <input
+                        type="text"
+                        name="phone"
+                        class="phone-input"
+                        placeholder="Phone"
+                        required
+                    >
+
+                </div>
+
+                <input
+                    type="email"
+                    name="email"
+                    placeholder="Email"
+                    required
+                >
+
+                <input
+                    type="text"
+                    name="telegram"
+                    placeholder="@telegram"
+                    required
+                >
+
+                <button class="btn">
+
+                    Generate QR
+
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+    <div class="steps">
+
+        <div class="step">
+
+            <img src="/images/step1.png">
+
+            <div class="step-number">
+                1
+            </div>
+
+            <div class="step-text">
+                Create your QR-code
+            </div>
+
+        </div>
+
+        <div class="step">
+
+            <img src="/images/step2.png">
+
+            <div class="step-number">
+                2
+            </div>
+
+            <div class="step-text">
+                Attach it to your item
+            </div>
+
+        </div>
+
+        <div class="step">
+
+            <img src="/images/step3.png">
+
+            <div class="step-number">
+                3
+            </div>
+
+            <div class="step-text">
+                Finder scans the code
+            </div>
+
+        </div>
+
+        <div class="step">
+
+            <img src="/images/step4.png">
+
+            <div class="step-number">
+                4
+            </div>
+
+            <div class="step-text">
+                Contact owner instantly
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<footer class="main-footer">
+    <div>
+        © 2026 QR-Found
+    </div>
+    <div style="margin-top: 10px;">
+        <a href="/faq" class="footer-link">FAQ</a>
+    </div>
+</footer>
+
+<script src="/js/main.js"></script>
+
+    <script>
+        let html5QrCode = null;
+
+        function openScanner() {
+            document.getElementById("scannerOverlay").style.display = "flex";
+            
+            html5QrCode = new Html5Qrcode("reader");
+            
+            const config = { 
+                fps: 10, 
+                qrbox: { width: 250, height: 250 } 
+            };
+
+            html5QrCode.start(
+                { facingMode: "environment" }, 
+                config, 
+                (decodedText) => {
+                    window.location.href = decodedText;
+                    closeScanner();
+                },
+                (errorMessage) => { }
+            ).catch((err) => {
+                console.error("Unable to start scan.", err);
+                alert("Camera access denied or not found.");
+            });
+        }
+
+        function closeScanner() {
+            if (html5QrCode) {
+                html5QrCode.stop().then(() => {
+                    document.getElementById("scannerOverlay").style.display = "none";
+                }).catch(err => {
+                    document.getElementById("scannerOverlay").style.display = "none";
+                    console.error("Error stopping scanner", err);
+                });
+            } else {
+                document.getElementById("scannerOverlay").style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>

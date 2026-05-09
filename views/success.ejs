@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>QR Generated</title>
+
+    <link rel="stylesheet" href="/css/style.css">
+
+</head>
+
+<body>
+
+<header class="main-header">
+    <a href="/">
+        <img src="/images/logo.png" class="logo" alt="QR-Found Logo">
+    </a>
+</header>
+
+<div class="container">
+
+    <div class="success-title">
+
+        Thank you,
+        <%= item.owner_name %>!
+
+    </div>
+
+    <div class="success-title">
+
+        Your QR-Found code is ready.
+
+    </div>
+
+    <div class="sub-title">
+
+        Your Unique QR Code
+
+    </div>
+
+    <div class="qr-container">
+
+        <img
+            src="<%= qrCode %>"
+            class="qr-img"
+        >
+
+    </div>
+
+    <!-- PDF BUTTON -->
+    <a
+        href="/generate_pdf/<%= item._id %>"
+        class="btn"
+    >
+
+        Download PDF
+
+    </a>
+
+    <!-- PNG BUTTON -->
+    <a
+        href="/generate_png/<%= item._id %>"
+        class="btn btn-secondary"
+    >
+
+        Download PNG
+
+    </a>
+
+    <ul class="instruction-list">
+
+        <li>
+            1. Print the downloaded PDF.
+        </li>
+
+        <li>
+            2. Attach the tag securely to your item.
+        </li>
+
+    </ul>
+
+    <div class="warning">
+
+        This is a temporary page.
+        Download your QR code before leaving.
+
+    </div>
+
+    <div class="success-small">
+
+        Protect another item
+        in just one minute.
+
+    </div>
+
+    <button class="btn" onclick="openModal()">
+    Create new QR-code
+</button>
+
+</div>
+
+
+<footer class="main-footer">
+    <div>
+        © 2026 QR-Found
+    </div>
+    <div style="margin-top: 10px;">
+        <a href="/faq" class="footer-link">FAQ</a>
+    </div>
+</footer>
+
+</body>
+
+</html>
