@@ -22,11 +22,11 @@ app.set('views', path.join(__dirname, 'views'));
 // Шукаємо змінну від Render, якщо її немає — беремо локальну базу
 const mongoose = require('mongoose');
 
-const dbURI = process.env.MONGODB_URI || 'mongodb://localhost:27017/qrfound';
+const dbURI = process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/qrfound';
 
 mongoose.connect(dbURI)
-  .then(() => console.log('✅ Підключено до хмарної бази MongoDB!'))
-  .catch(err => console.error('❌ Помилка підключення:', err));
+  .then(() => console.log(' Підключено до хмарної бази MongoDB!'))
+  .catch(err => console.error(' Помилка підключення:', err));
 
 // ROUTES
 const routes = require('./app');
