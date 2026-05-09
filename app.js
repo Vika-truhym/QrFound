@@ -20,14 +20,17 @@ router.get('/faq', (req, res) => {
 
 // CREATE ITEM (FORM SUBMIT)
 router.post('/create', async (req, res) => {
-
-    const newItem = new Item(req.body);
-    await newItem.save();
-
-    // після створення — редірект на success
-    res.redirect(`/success/${newItem._id}`);
+    try {
+        console.log("Отримано дані форми:", req.body);
+        const newItem = new Item(req.body);
+        await newItem.save();
+        console.log("Дані успішно збережені в MongoDB Atlas!");
+        res.redirect(`/success/${newItem._id}`);
+    } catch (err) {
+        console.error("Помилка при збереженні в базу:", err.message);
+        res.status(500).send("Не вдалося зберегти дані в базу. Перевірте з'єднання.");
+    }
 });
-
 
 // SUCCESS PAGE
 router.get('/success/:id', async (req, res) => {
