@@ -200,6 +200,10 @@ router.get('/generate_png/:id', async (req, res) => {
 });
 
 
+router.get('/debug/items', async (req, res) => {
+    const items = await Item.find();
+    res.json(items);
+});
 // 404
 router.use((req, res) => {
     res.status(404).send("Page not found");

@@ -1,0 +1,261 @@
+[{
+  "_id": {
+    "$oid": "69ea75e35a51167f38e4efb9"
+  },
+  "item_name": "Keys",
+  "owner_name": "John",
+  "phone": "+380123456789",
+  "email": "john@gmail.com",
+  "telegram": "@john"
+},
+{
+  "_id": {
+    "$oid": "69ea7a495a51167f38e4efba"
+  },
+  "item_name": "Backpack",
+  "owner_name": "Vika",
+  "phone": "+380671112233",
+  "email": "vika@gmail.com",
+  "telegram": "@vika"
+},
+{
+  "_id": {
+    "$oid": "69ea7a545a51167f38e4efbb"
+  },
+  "item_name": "Wallet",
+  "owner_name": "Andrii",
+  "phone": "+380931112233",
+  "email": "andrii@gmail.com",
+  "telegram": "@andrii"
+},
+{
+  "_id": {
+    "$oid": "69ea7d335d14d4cb310855ba"
+  },
+  "item_name": "Laptop",
+  "owner_name": "Dmytro",
+  "phone": "+380501998877",
+  "email": "dmytro@gmail.com",
+  "telegram": "@dmytro"
+},
+{
+  "_id": {
+    "$oid": "69ea7d3e5d14d4cb310855bb"
+  },
+  "item_name": "Keys",
+  "owner_name": "Sofia",
+  "phone": "+380931122334",
+  "email": "sofia@gmail.com",
+  "telegram": "@sofia"
+},
+{
+  "_id": {
+    "$oid": "69ea7d5c5d14d4cb310855bc"
+  },
+  "item_name": "Umbrella",
+  "owner_name": "Vika",
+  "phone": "+380671110000",
+  "email": "vika124@gmail.com",
+  "telegram": "@vika124"
+},
+{
+  "_id": {
+    "$oid": "69f19b9e5d14d4cb310855be"
+  },
+  "item_name": "ff",
+  "owner_name": "Vdkd",
+  "phone": "+380976543212",
+  "email": "vkfk@gmail.com",
+  "telegram": "ddkkd"
+},
+{
+  "_id": {
+    "$oid": "69f1a34613eab0d56783c979"
+  },
+  "item_name": "fррf",
+  "owner_name": "Vdkммd",
+  "phone": "+380976543212",
+  "email": "ddk@gmail.com",
+  "telegram": "hgakd"
+},
+{
+  "_id": {
+    "$oid": "69f76b4ec10d1056a5819652"
+  },
+  "item_name": "ь",
+  "owner_name": "2",
+  "phone": "а",
+  "email": "а",
+  "telegram": "а",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69f7a8c0583a4e141e2c4799"
+  },
+  "item_name": "ff",
+  "owner_name": "ff",
+  "country_code": "+380",
+  "phone": "555555555",
+  "email": "ff@g",
+  "telegram": "dd",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69f7ab395f6eedade3ce7f03"
+  },
+  "item_name": "Book",
+  "owner_name": "Vika",
+  "country_code": "+380",
+  "phone": "123456789",
+  "email": "test@mail.com",
+  "telegram": "@test",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69f7ab790bb8de18ef46e9ea"
+  },
+  "item_name": "Book",
+  "owner_name": "Vika",
+  "country_code": "+380",
+  "phone": "123456789",
+  "email": "test@mail.com",
+  "telegram": "@test",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69f7ac370bb8de18ef46e9ec"
+  },
+  "item_name": "Book",
+  "owner_name": "Vika",
+  "country_code": "+380",
+  "phone": "123456789",
+  "email": "test@mail.com",
+  "telegram": "@test",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69f7ac874c49696e0648aca5"
+  },
+  "item_name": "Book",
+  "owner_name": "Vika",
+  "country_code": "+380",
+  "phone": "123456789",
+  "email": "test@mail.com",
+  "telegram": "@test",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69fe53e9ac3f674c493e1fb6"
+  },
+  "item_name": "ssоо",
+  "owner_name": "оо",
+  "phone": "39423904ьь33333",
+  "email": "fkf@d",
+  "telegram": "f",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69fe54d0ac3f674c493e1fb7"
+  },
+  "item_name": "аа",
+  "owner_name": "аа",
+  "phone": "48г239324309",
+  "email": "HH@ff",
+  "telegram": "d",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69fe5659ac3f674c493e1fb8"
+  },
+  "item_name": "hh",
+  "owner_name": "dkk",
+  "phone": "3099999999999999999",
+  "email": "jdjd@ff",
+  "telegram": "dkdkkd",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69fe57cfc92baaa1041ac847"
+  },
+  "item_name": "d",
+  "owner_name": "d",
+  "phone": "8585858",
+  "email": "d@g",
+  "telegram": "m",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69fe57e3c92baaa1041ac848"
+  },
+  "item_name": "f",
+  "owner_name": "f",
+  "phone": "6666666666666",
+  "email": "g@f",
+  "telegram": "kk",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69ff1780c92baaa1041ac849"
+  },
+  "item_name": "ofo",
+  "owner_name": "h",
+  "phone": "49999990",
+  "email": "jj@ff",
+  "telegram": "r",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69ff195e1ccdf7156f847bbd"
+  },
+  "item_name": "g",
+  "owner_name": "g",
+  "phone": "5656565665",
+  "email": "gg@gg",
+  "telegram": "gg",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69ff195e1ccdf7156f847bbe"
+  },
+  "item_name": "g",
+  "owner_name": "g",
+  "phone": "5656565665",
+  "email": "gg@gg",
+  "telegram": "gg",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69ff19ec1ccdf7156f847bbf"
+  },
+  "item_name": "f",
+  "owner_name": "f",
+  "phone": "959595",
+  "email": "G@f",
+  "telegram": "f",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69ff259e00eb4381edaa4d01"
+  },
+  "item_name": "djd",
+  "owner_name": "dkdk",
+  "phone": "kdkdk",
+  "email": "kdkd@h",
+  "telegram": "di",
+  "__v": 0
+}]

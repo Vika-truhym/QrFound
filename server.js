@@ -59,11 +59,11 @@ async function startServer() {
 
         // 2. ТІЛЬКИ ТЕПЕР ЗАПУСКАЄМО СЕРВЕР
         app.listen(PORT, '0.0.0.0', () => {
-            console.log(`🚀 Server running on port ${PORT}`);
+            console.log(`Server running on port ${PORT}`);
         });
 
     } catch (err) {
-        console.error('❌ MongoDB connection error:');
+        console.error('MongoDB connection error:');
         console.error(err);
     }
 }
