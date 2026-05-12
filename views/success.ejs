@@ -113,6 +113,75 @@
     </div>
 </footer>
 
+<div class="overlay" id="overlay">
+
+    <div class="modal">
+
+        <div class="close-btn" onclick="closeModal()">×</div>
+
+        <div class="gradient-title">
+            Create your QR code
+        </div>
+
+        <div style="font-size:14px; color:#666; line-height:1.4; margin-bottom:15px;">
+            Fill in a few simple details so your item can be returned to you if it gets lost.  
+            This information helps the finder contact you quickly and safely.
+        </div>
+
+        <form action="/create" method="POST">
+
+            <input type="text" name="item_name" placeholder="Item name" required>
+            <input type="text" name="owner_name" placeholder="Owner name" required>
+
+            <div class="phone-row">
+
+                <select name="country_code" class="phone-code">
+
+    <option value="+1">🇺🇸 +1</option>
+    <option value="+1">🇨🇦 +1</option>
+
+    <option value="+44">🇬🇧 +44</option>
+
+    <option value="+49">🇩🇪 +49</option>
+    <option value="+33">🇫🇷 +33</option>
+    <option value="+39">🇮🇹 +39</option>
+    <option value="+34">🇪🇸 +34</option>
+
+    <option value="+48">🇵🇱 +48</option>
+    <option value="+380" selected>🇺🇦 +380</option>
+
+    <option value="+420">🇨🇿 +420</option>
+    <option value="+40">🇷🇴 +40</option>
+    <option value="+36">🇭🇺 +36</option>
+
+    <option value="+90">🇹🇷 +90</option>
+
+    <option value="+971">🇦🇪 +971</option>
+
+    <option value="+81">🇯🇵 +81</option>
+    <option value="+82">🇰🇷 +82</option>
+    <option value="+86">🇨🇳 +86</option>
+
+    <option value="+91">🇮🇳 +91</option>
+
+    <option value="+61">🇦🇺 +61</option>
+
+</select>
+
+                <input type="text" name="phone" class="phone-input" placeholder="Phone" required>
+
+            </div>
+
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="text" name="telegram" placeholder="@telegram" required>
+
+            <button class="btn">Generate QR</button>
+
+        </form>
+
+    </div>
+
+</div>
 </body>
 
 </html>
