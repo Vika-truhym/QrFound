@@ -222,6 +222,15 @@ select{
    STEPS SECTION
 ========================= */
 
+.how-it-works-title{
+    text-align:center;
+    font-size:24px;
+    font-weight:800;
+    color:var(--color-dark);
+    margin-top:30px;
+    margin-bottom:15px;
+}
+
 .steps{
     display:grid;
     grid-template-columns:1fr 1fr;
